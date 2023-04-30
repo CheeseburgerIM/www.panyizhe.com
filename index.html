@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheeseburgerIM - Tony Pan</title>
+    <link rel="icon" type="image/png" href="https://panyizhe.gitee.io/chai_gallery/Front-End/Static/web_icon.jpg" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <meta name="author" content="Tony Pan">
+    <meta name="copyright" content="Pan Yizhe">
+    <meta name="nickname" content="CheeseburgerIM">
+</head>
+<style>
+    #app {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <ol>
+            <li><a href="https://panyizhe.com" target="_blank">panyizhe.com</a></li>
+            <li v-for="l in links" :key="l"><a :href="'https://'+l+'.panyizhe.com'"
+                    target="_blank">{{l+".panyizhe.com"}}</a></li>
+        </ol>
+    </div>
+</body>
+
+<script>
+    const { createApp } = Vue
+    const app = createApp({
+        data() {
+            return {
+                links: [
+                    'blog',
+                    'happy',
+                    'study',
+                    'beloved'
+                ]
+            }
+        }
+    })
+    app.mount('#app')
+</script>
+
+</html>
