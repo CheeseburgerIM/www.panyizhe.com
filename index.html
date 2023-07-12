@@ -26,7 +26,9 @@
     <div id="app">
         <ol>
             <li><a href="https://panyizhe.com" target="_blank">panyizhe.com</a></li>
-            <li v-for="l in links" :key="l"><a :href="'https://'+l+'.panyizhe.com'"
+            <li v-for="l in postLinks" :key="l"><a :href="'https://panyizhe.'+l" target="_blank">{{"panyizhe."+l}}</a>
+            </li>
+            <li v-for="l in preLinks" :key="l"><a :href="'https://'+l+'.panyizhe.com'"
                     target="_blank">{{l+".panyizhe.com"}}</a></li>
         </ol>
     </div>
@@ -37,12 +39,10 @@
     const app = createApp({
         data() {
             return {
-                links: [
-                    'blog',
-                    'happy',
-                    'study',
-                    'beloved',
-                    'ys.happy'
+                postLinks: [
+                    "gitee.io"
+                ],
+                preLinks: [
                 ]
             }
         }

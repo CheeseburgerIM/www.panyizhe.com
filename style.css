@@ -2,16 +2,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-size: 7px;
 }
 
 ol {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 a {
     text-decoration: none;
     color: black;
     border-bottom: transparent solid 1px;
+    font-size: 7rem;
 }
 
 a:hover {
